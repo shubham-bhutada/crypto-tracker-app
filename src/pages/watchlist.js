@@ -12,20 +12,20 @@ function WatchlistPage() {
   const [myWatchlist, setMyWatchlist] = useState([]);
   const [isloading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    getData();
-  }, []);
+//   useEffect(() => {
+//     getData();
+//   }, []);
 
-  const getData = async () => {
-    setIsLoading(true);
-    const allCoins = await get100Coins();
-    console.log("100 coins: "+allCoins);
-    if (coins && allCoins) {
-      setMyWatchlist(allCoins.filter((item) => coins.includes(item.id)));
-    }
-    console.log("set my coins: "+(allCoins.filter((item) => coins.includes(item.id))));
-    setIsLoading(false);
-  };
+//   const getData = async () => {
+//     setIsLoading(true);
+//     const allCoins = await get100Coins();
+//     console.log("100 coins: "+ allCoins);
+//     if (coins && allCoins) {
+//       setMyWatchlist(allCoins.filter((item) => coins.includes(item.id)));
+//     }
+//     console.log("set my coins: "+(allCoins.filter((item) => coins.includes(item.id))));
+//     setIsLoading(false);
+//   };
 
   return (
     <div>
@@ -53,7 +53,7 @@ function WatchlistPage() {
           ) : (
             <div style={{ height: "95vh" }}>
               <Header />
-              <TabsComponent coins={myWatchlist} isWatchlistPage={true} />
+              {/* <TabsComponent coins={myWatchlist} isWatchlistPage={true} /> */}
             </div>
           )}
         </div>

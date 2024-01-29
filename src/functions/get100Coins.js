@@ -7,6 +7,7 @@ export const get100Coins = () => {
     )
     .then((response) => {
       console.log(response);
+      console.log(response.data);
       return response.data;
     })
     .catch((error) => {
