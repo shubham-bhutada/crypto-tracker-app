@@ -1,13 +1,111 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root {
+  --white: #edf2f4;
+  --black: #161a1d;
+  --orange: #e85d04;
+  --light-orange: #f29f6c;
+  --grey: #888;
+  --darkgrey: #1b1b1b;
+  --green: #14d017;
+  --red: #ec4c24;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+[data-theme="dark"] {
+  --white: #ffffff;
+  --black: #111;
+  --grey: #888;
+  --darkgrey: #1b1b1b;
+}
+
+[data-theme="light"] {
+  --white: #111;
+  --black: #fff;
+  --grey: #888;
+  --darkgrey: #f3f3f3;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Inter", sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+::selection {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--orange);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: red;
+}
+
+a {
+  color: var(--white) !important;
+  text-decoration: none !important;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.grey-wrapper {
+  background-color: var(--darkgrey);
+  margin: auto;
+  display: block;
+  width: 90vw;
+  padding: 0 0.5rem;
+  border-radius: 1rem;
+}
+
+.coins-days-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .coins-days-div {
+    gap: 0rem !important;
+    padding: 0rem;
+    margin-left: 0.3rem;
+  }
+  #demo-simple-select {
+    width: fit-content;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .coins-days-div {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
 }

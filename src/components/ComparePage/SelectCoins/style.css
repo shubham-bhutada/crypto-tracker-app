@@ -1,0 +1,50 @@
+.select-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.select-coins-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1.5rem 3rem;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 800px){
+  .select-flex p {
+    font-size: 0.8rem;
+  }
+  #demo-simple-select {
+    font-size: 0.8rem;
+  }
+  .select-flex {
+    gap: 0.5rem;
+  }
+  .select-coins-div {
+    gap: 0.8rem;
+  }
+  .coins-days-div{
+    
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .select-flex p {
+    font-size: 0.6rem;
+  }
+  #demo-simple-select {
+    font-size: 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .select-flex p {
+    font-size: 0.5rem;
+  }
+  #demo-simple-select {
+    font-size: 0.5rem;
+  }
+}

@@ -1,0 +1,40 @@
+.coin-description {
+  padding: 1rem !important;
+  box-sizing: border-box;
+  margin-top: 2rem; 
+}
+
+.coin-description h1 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.info-p a {
+  text-decoration: underline !important;
+}
+
+.info-p a:hover {
+  color: var(--blue) !important;
+  transition: all 0.5s ease;
+  color: var(--orange) !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .coin-description h1 {
+    font-size: 1rem;
+    margin: 0;
+  }
+  .coin-description p {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .coin-description h1 {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  .coin-description p {
+    font-size: 0.6rem;
+  }
+}

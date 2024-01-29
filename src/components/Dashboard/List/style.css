@@ -1,0 +1,279 @@
+.list-row {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+  gap: 1.5rem;
+}
+
+.list-row:hover {
+  background-color: var(--darkgrey);
+  transition: all 0.5s ease;
+}
+
+.list-row td {
+  width: 18%;
+}
+
+.td-img {
+  width: min-content !important;
+}
+
+.mobile-td-cap,
+.mobile-price {
+  display: none;
+}
+
+.coin-logo-td{
+  height: 3.5rem;
+  width: 3.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.info-flex-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .td-img img {
+    width: 2rem !important;
+    height: 2rem !important;
+  }
+
+  .price-chip-list {
+    min-width: 1.5rem !important;
+    font-size: 0.8rem !important;
+    border-width: 2px !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+  .trending-icon-list {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 890px) {
+  .td-img {
+    margin-right: 0.5rem;
+  }
+  .list-row {
+    margin-top: 1rem;
+    width: 100%;
+    gap: 0rem !important;
+    padding: 0rem;
+  }
+  .td-marketCap,
+  .desktop-price {
+    display: none !important;
+  }
+  .mobile-td-cap,
+  .mobile-price {
+    display: block;
+  }
+  .coin-total_volume {
+    font-size: 12px;
+  }
+
+  .coin-price-list {
+    font-size: 0.8rem !important;
+    margin-right: 0.5rem;
+  }
+  .coin-symbol-list,
+  .coin-name-list,
+  .coin-total_volume-list {
+    font-size: 80% !important;
+  }
+  .price-chip-list {
+    min-width: 60px;
+    max-width: 60px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .list-row td p {
+    margin: 0;
+    max-width: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .list-row td p {
+    margin: 0;
+    max-width: 1rem;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .td-totalVolume {
+    display: none;
+  }
+  .price-chip-list {
+    font-size: 8px !important;
+  }
+  .css-13xfq8m-MuiTabPanel-root {
+    padding: 8px !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .td-price-chip-list {
+    display: none;
+  }
+}
+
+/*.coin-image {
+  width: 2rem;
+}
+
+.td-info {
+  width: 10rem !important;
+}
+
+.current-price {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--green);
+  margin-top: 0;
+  width: 6rem !important;
+  text-align: right !important;
+}
+
+.current-price-red {
+  color: var(--red) !important;
+}
+
+.current-price-center {
+  text-align: center !important;
+}
+
+.td-totalVolume,
+.td-marketCap {
+  text-align: right !important;
+}
+
+.mobile {
+  display: none;
+}
+
+.chip {
+  color: var(--green);
+  text-align: center !important;
+}
+
+.red {
+  color: var(--red) !important;
+}
+
+.coin-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+}
+
+.symbol {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.name {
+  color: var(--grey);
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-top: 0.2rem !important;
+  margin: 0;
+}
+*/
+
+/*@media only screen and (max-width: 1000px) {
+  .trending-icon {
+    display: none !important;
+  }
+
+  .list-row td {
+    font-size: 0.8rem;
+  }
+
+  .td-totalVolume {
+    display: none;
+  }
+
+  .td-current-price {
+    text-align: center !important;
+  }
+
+  .list-row {
+    width: 100%;
+    padding: 0.8rem 0rem;
+  }
+
+  .coin-image-td {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .td-info {
+    width: 6rem !important;
+  }
+  .css-13xfq8m-MuiTabPanel-root {
+    padding: 16px !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .td-marketCap,
+  .td-chip-icon {
+    display: none !important;
+  }
+  .mobile {
+    display: block !important;
+    text-align: center !important;
+  }
+  .list-row td,
+  .td-p {
+    font-size: 0.65rem !important;
+  }
+  .list-row {
+    width: 100%;
+    padding: 0.5rem 0rem;
+  }
+  .td-info {
+    width: 4rem !important;
+  }
+
+  .coin-image-td {
+    height: 1.8rem !important;
+    width: 1.8rem !important;
+  }
+
+  .chip {
+    max-width: fit-content !important;
+    min-width: fit-content !important;
+    padding: 0.5rem !important;
+  }
+  .td-img {
+    margin-right: 0 !important;
+    width: fit-content;
+  }
+  .current-price {
+    width: max-content;
+  }
+
+  .css-13xfq8m-MuiTabPanel-root {
+    padding: 8px !important;
+  }
+}
+*/
+

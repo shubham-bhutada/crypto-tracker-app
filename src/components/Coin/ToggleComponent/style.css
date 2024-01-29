@@ -1,0 +1,19 @@
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .toggle-btn {
+    font-size: 0.7rem !important;
+    padding: 0.5rem !important;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .toggle-btn {
+    font-size: 0.5rem !important;
+    padding: 0.3rem !important;
+  }
+}
