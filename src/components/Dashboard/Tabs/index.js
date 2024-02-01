@@ -15,7 +15,6 @@ export default function TabsComponent({
   setSearch,
   isWatchlistPage,
 }) {
-  console.log(coins);
   const [value, setValue] = useState("grid");
 
   const handleChange = (event, newValue) => {
@@ -109,7 +108,7 @@ export default function TabsComponent({
           </table>
         </TabPanel>
       </TabContext>
-      {search.length > 0 && coins.length === 0 && (
+      {search?.length > 0 && coins.length === 0 && (
         <div className="search-edge-case">
           <h2>No result found</h2>
           <button onClick={clearSearch}>Clear search</button>
