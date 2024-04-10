@@ -7,23 +7,27 @@ import { Switch } from "@mui/material";
 import { toast } from "react-toastify";
 
 const Header = () => {
+
+  // getting the theme key value from the local storage 
   const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("theme") == "dark" ? true : false
+    localStorage.getItem("theme") === "dark" ? true : false
   );
 
+  // to set the initial theme of the page depending upon the local storage
   useEffect(() => {
-    if (localStorage.getItem("theme") == "dark") {
+    if (localStorage.getItem("theme") === "dark") {
       setDark();
     } else {
       setLight();
     }
   }, []);
 
+  // toggeling the themes on toggling the switch
   const changeMode = () => {
     setDarkMode(!darkMode);
     toast.success("Theme Changed!");
     const mode = localStorage.getItem("theme");
-    if (mode == "dark") {
+    if (mode === "dark") {
       setLight();
     } else {
       setDark();

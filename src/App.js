@@ -5,11 +5,13 @@ import HomePage from "./pages/HomePage";
 import DashBoardPage from "./pages/DashBoardPage";
 import CoinPage from "./pages/Coin";
 import ComparePage from "./pages/ComparePage";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import WatchlistPage from "./pages/watchlist";
 
 function App() {
+
+  // theme helps my m ui components to be set with the required color
   const theme = createTheme({
     palette: {
       primary: {

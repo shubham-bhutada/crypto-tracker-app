@@ -11,7 +11,7 @@ export const get100Coins = () => {
     })
     .catch((error) => {
       console.log(error);
-      console.log(error.message);
+      return error.message;
     });
   return myCoins;
 };

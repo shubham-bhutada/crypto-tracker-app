@@ -15,7 +15,6 @@ export default function TabsComponent({
   setSearch,
   isWatchlistPage,
 }) {
-  console.log(coins);
   const [value, setValue] = useState("grid");
 
   const handleChange = (event, newValue) => {
@@ -52,7 +51,7 @@ export default function TabsComponent({
         </TabList>
         <TabPanel value="grid">
           <div className="grid-flex">
-            {coins.length == 0 ? (
+            {coins.length === 0 ? (
               <div>
                 <h1 style={{ textAlign: "center", marginBottom: "2rem" }}>
                   No Items Found
@@ -82,7 +81,7 @@ export default function TabsComponent({
         </TabPanel>
         <TabPanel value="list">
           <table className="list-table">
-            {coins.length == 0 ? (
+            {coins.length === 0 ? (
               <div>
                 <h1 style={{ textAlign: "center", marginBottom: "2rem" }}>
                   No Items Found
@@ -109,7 +108,7 @@ export default function TabsComponent({
           </table>
         </TabPanel>
       </TabContext>
-      {search.length > 0 && coins.length === 0 && (
+      {search?.length > 0 && coins.length === 0 && (
         <div className="search-edge-case">
           <h2>No result found</h2>
           <button onClick={clearSearch}>Clear search</button>

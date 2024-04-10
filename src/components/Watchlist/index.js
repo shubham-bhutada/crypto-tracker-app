@@ -19,14 +19,11 @@ function WatchlistPage() {
     console.log("coins:" + coins);
     const allCoins = await get100Coins();
     if (coins) {
-      setMyWatchlist(allCoins.filter((item) => coins.includes(item.id)));
+      const myList = allCoins.filter((item) => coins.includes(item.id));
+      setMyWatchlist(myList);
     }
     setIsLoading(false);
   };
-
-  useEffect(() => {
-    console.log("useffect: "+myWatchlist);
-  }, [myWatchlist]);
 
   return (
     <div>
@@ -49,9 +46,9 @@ function WatchlistPage() {
           ) : (
             <div style={{ height: "95vh" }}>
               <Header />
-              {/* {myWatchlist && (
+              {myWatchlist && (
                 <TabsComponent coins={myWatchlist} isWatchlistPage={true} />
-              )} */}
+              )}
             </div>
           )}
         </div>
